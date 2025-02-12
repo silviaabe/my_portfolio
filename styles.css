@@ -250,7 +250,13 @@ li a:hover {
   h2 {
     color: #817a7a;
     font-size: 35px;
-    padding: 10px 0;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  p {
+    color: #817a7a;
+    margin-top: 10px;
     text-align: center;
   }
 }
