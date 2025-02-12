@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: #e8e8e8; 
+}
+
+.main-box {
+  height: 90vh;
+  width: 100%;
+  background-image: url(./assets/images/background.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.main-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.main-box h1, .main-box h3, .main-box .social-links {
+  position: relative;
+  z-index: 2;
+  color: #342e2e;
+  background: none;
+  padding: 0;
+}
+
+.main-box h1 {
+  margin-bottom: 8px;
+}
+
+.main-box h3 {
+  font-family: "Nunito Sans", serif;
+}
+
+nav, .title, li {
+  position: relative;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.title {
+  color: #342e2e;
+  font-size: 35px;
+
+  span {
+    color: #cfcdc7;
+  }
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  font-family: "Nunito Sans", serif;
+  font-size: 18px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+li a {
+  color: #817a7a;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+  transition: ease 0.5s;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links i {
+  background: none;
+}
+
+.social-links a {
+  color: #342e2e; /* Cor dos ícones */
+  font-size: 20px;
+  text-decoration: none;
+  background: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.line {
+  width: 50px; /* Comprimento do traço */
+  height: 2px; /* Espessura do traço */
+  background-color: #342e2e; /* Cor do traço */
+  margin-top: 20px;
+}
+
+.about--all {
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  padding: 100px 20%;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+
+  img {
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid #817a7a;
+  }
+
+  h2 {
+    color: #817a7a;
+    font-size: 35px;
+  }
+
+  p {
+    color: #342e2e;
+    font-size: 18px;
+    font-family: "Nunito Sans", serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #342e2e;
+    color: #fbfbfb;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 26px;
+  }
+
+  a:hover {
+    cursor: pointer;
+    background-color: #e8e8e8;
+    color: #342e2e;
+    border: 1px solid #342e2e;
+  }
+}
+
+.technologies {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  i {
+    font-size: 40px;
+    margin-right: 5px;
+    color: #817a7a;
+    width: 100%;
+    object-fit: contain;
+    max-height: 120px;
+    transition: transform 450ms;
+    animation: moveIcons 60s linear infinite; 
+  }
+
+  i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.technologies--wrapper {
+  display: flex;
+  transition: transform 9s linear;
+}
+
+.technologies::-webkit-scrollbar {
+  display: none;
+}
+
+.projects {
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+
+  h2 {
+    color: #817a7a;
+    font-size: 35px;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Container do grid */
+.grid-container {
+  display: grid;                       /* Ativa o grid */
+  grid-template-columns: repeat(2, 1fr);  /* Define 3 colunas de tamanho igual */
+  grid-gap: 20px;                        /* Espaçamento entre os itens */
+  padding: 20px;                         /* Espaçamento interno */
+}
+
+/* Estilo para os itens do grid */
+.grid-item {
+  background-color: #cfcdc7;            /* Cor de fundo */
+  color: #817a7a;                         /* Cor do texto */
+  padding: 20px;                        /* Espaçamento interno */
+  text-align: center;                   /* Alinha o texto ao centro */
+  border-radius: 5px;                   /* Bordas arredondadas */
+
+  img {
+    height: 270px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  h3 {
+    padding-top: 13px;
+  }
+}
+
+.contact {
+  height: 100vh;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+
+  h2 {
+    color: #817a7a;
+    font-size: 35px;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+.footer {
+  text-align: center;
+  color: #817a7a;
+  padding: 16px 0;
+  margin-top: 32px;
+}
