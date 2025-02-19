@@ -1,0 +1,82 @@
+.about--all {
+  height: 110vh;
+  text-align: center;
+  justify-content: center;
+  padding: 100px 20%;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+
+  img {
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid #817a7a;
+  }
+
+  h2 {
+    color: #817a7a;
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    color: #342e2e;
+    font-size: 18px;
+    font-family: "Nunito Sans", serif;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #342e2e;
+    color: #fbfbfb;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 26px;
+  }
+
+  a:hover {
+    cursor: pointer;
+    background-color: #e8e8e8;
+    color: #342e2e;
+    border: 1px solid #342e2e;
+  }
+}
+
+.technologies {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px;
+  padding-bottom: 50px;
+
+  i {
+    font-size: 40px;
+    margin-right: 5px;
+    color: #817a7a;
+    width: 100%;
+    object-fit: contain;
+    max-height: 120px;
+    transition: transform 450ms;
+    animation: moveIcons 60s linear infinite; 
+  }
+
+  i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.technologies--wrapper {
+  display: flex;
+  transition: transform 9s linear;
+}
+
+.technologies::-webkit-scrollbar {
+  display: none;
+}
