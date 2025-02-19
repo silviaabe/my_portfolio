@@ -1,5 +1,0 @@
---black: #342e2e;
---dark-gray: #817a7a;
---medium-gray: #cfcdc7;
---light-gray: #e8e8e8;
---white: #fbfbfb;
