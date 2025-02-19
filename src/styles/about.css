@@ -9,17 +9,17 @@
   img {
     height: 200px;
     border-radius: 100%;
-    border: 2px solid #817a7a;
+    border: 2px solid var(--dark-gray);
   }
 
   h2 {
-    color: #817a7a;
+    color: var(--dark-gray);
     font-size: 35px;
     margin-bottom: 25px;
   }
 
   p {
-    color: #342e2e;
+    color: var(--black);
     font-size: 18px;
     font-family: "Nunito Sans", serif;
     margin-bottom: 30px;
@@ -29,8 +29,8 @@
   a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #342e2e;
-    color: #fbfbfb;
+    background-color: var(--black);
+    color: var(--white);
     text-align: center;
     text-decoration: none;
     font-size: 18px;
@@ -39,9 +39,9 @@
 
   a:hover {
     cursor: pointer;
-    background-color: #e8e8e8;
-    color: #342e2e;
-    border: 1px solid #342e2e;
+    background-color: var(--light-gray);
+    color: var(--black);
+    border: 1px solid var(--black);
   }
 }
 
@@ -58,7 +58,7 @@
   i {
     font-size: 40px;
     margin-right: 5px;
-    color: #817a7a;
+    color: var(--dark-gray);
     width: 100%;
     object-fit: contain;
     max-height: 120px;

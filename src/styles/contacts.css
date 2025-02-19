@@ -6,14 +6,14 @@
   justify-content: center;
 
   h2 {
-    color: #817a7a;
+    color: var(--dark-gray);
     font-size: 35px;
     margin-bottom: 25px;
     text-align: center;
   }
 
   .contact-links {
-    color: #817a7a;
+    color: var(--dark-gray);
     text-align: left;
     grid-gap: 20px;
     padding: 70px 20px 20px;
@@ -32,14 +32,14 @@
       }
 
       i {
-        background-color: #e8e8e8;
-        color: #342e2e;
+        background-color: var(--light-gray);
+        color: var(--black);
         margin-right: 10px;
         font-size: 30px;
       }
 
       h3 {
-        color: #817a7a;
+        color: var(--dark-gray);
         font-size: 20px;
       }
 

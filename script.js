@@ -71,3 +71,16 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+function toggleMode() {
+  const html = document.documentElement;
+  
+  // Alterna a classe entre 'light' e 'dark'
+  if (html.classList.contains('light')) {
+    html.classList.remove('light');
+    html.classList.add('dark');
+  } else {
+    html.classList.remove('dark');
+    html.classList.add('light');
+  }
+}

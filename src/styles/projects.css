@@ -4,7 +4,7 @@
   transition: opacity 0.5s ease-in-out;
 
   h2 {
-    color: #817a7a;
+    color: var(--dark-gray);
     font-size: 35px;
     margin-bottom: 25px;
     text-align: center;
@@ -21,8 +21,8 @@
 
 /* Estilo para os itens do grid */
 .grid-item {
-  background-color: #cfcdc7;            /* Cor de fundo */
-  color: #817a7a;                         /* Cor do texto */
+  background-color: var(--medium-gray);            /* Cor de fundo */
+  color: var(--project-text);                         /* Cor do texto */
   padding: 20px;                        /* Espaçamento interno */
   text-align: center;                   /* Alinha o texto ao centro */
   border-radius: 5px;                   /* Bordas arredondadas */
@@ -46,20 +46,20 @@
   .buttons a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #cfcdc7;
-    color: #342e2e;
+    background-color: var(--medium-gray);
+    color: var(--project-text);
     text-align: center;
     text-decoration: none;
     border: none;
     font-size: 12px;
     border-radius: 26px;
-    border: 1px solid #342e2e;
+    border: 1px solid var(--project-text);
   }
 
   .buttons a:hover {
     cursor: pointer;
-    background-color: #342e2e;
-    color: #e8e8e8;
+    background-color: var(--project-text);
+    color: var(--button-hover);
   }
 
   .tech-tags {

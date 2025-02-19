@@ -28,7 +28,7 @@
 .main-box h1, .main-box h3, .main-box h2, .main-box .social-links {
   position: relative;
   z-index: 2;
-  color: #342e2e;
+  color: var(--main-text);
   background: none;
   padding: 0;
 }
@@ -65,7 +65,7 @@
 }
 
 .social-links a {
-  color: #342e2e; /* Cor dos ícones */
+  color: var(--main-text); /* Cor dos ícones */
   font-size: 24px;
   text-decoration: none;
   background: none;
@@ -74,5 +74,5 @@
 .line {
   width: 50px; /* Comprimento do traço */
   height: 2px; /* Espessura do traço */
-  background-color: #342e2e; /* Cor do traço */
+  background-color: var(--main-text); /* Cor do traço */
 }

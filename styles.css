@@ -5,13 +5,39 @@
   font-family: "Manrope", sans-serif;
 }
 
+:root {
+  --black: #342e2e;
+  --dark-gray: #817a7a;
+  --medium-gray: #cfcdc7;
+  --light-gray: #e8e8e8;
+  --white: #fbfbfb;
+  --button-border:  rgba(129, 122, 122, 0.5);
+  --main-text: #342e2e;
+  --project-text: #817a7a;
+  --button-hover: #e8e8e8;
+  --switch-bg-url: url(../../assets/images/Sun.svg);
+}
+
+.dark {
+  --black: #fbfbfb;
+  --dark-gray: #e8e8e8;
+  --medium-gray: #cfcdc7;
+  --light-gray: #817a7a;
+  --white: #342e2e;
+  --button-border: rgba(232, 232, 232, 0.5);
+  --main-text: #342e2e;
+  --project-text: #817a7a;
+  --button-hover: #e8e8e8;
+  --switch-bg-url: url(../../assets/images/MoonStars.svg);
+}
+
 body {
-  background-color: #e8e8e8; 
+  background-color: var(--light-gray); 
 }
 
 .footer {
   text-align: center;
-  color: #817a7a;
+  color: var(--dark-gray);
   padding: 16px 0;
   margin-top: 32px;
 }

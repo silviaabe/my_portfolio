@@ -7,7 +7,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: #e8e8e8;
+  background-color: var(--light-gray);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,22 +15,27 @@ nav {
 }
 
 .nav-link {
-  color: #817a7a;
+  color: var(--dark-gray);
   text-decoration: none;
   padding: 10px;
 }
 
 .nav-link.active {
-  color: #342e2e;
+  color: var(--black);
   font-weight: bold;
 }
 
+.right-side {
+  display: flex;
+  align-items: center;
+}
+
 .title {
-  color: #342e2e;
+  color: var(--black);
   font-size: 35px;
 
   span {
-    color: #cfcdc7;
+    color: var(--medium-gray);
   }
 }
 
@@ -39,17 +44,17 @@ li {
   display: inline-block;
   font-family: "Nunito Sans", serif;
   font-size: 18px;
-  margin-right: 30px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
 li a {
-  color: #817a7a;
+  color: var(--dark-gray);
   text-decoration: none;
 }
 
 li a:hover {
-  color: #342e2e;
+  color: var(--black);
   font-weight: bold;
   transition: ease 0.5s;
 }

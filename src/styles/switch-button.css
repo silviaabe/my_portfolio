@@ -1,0 +1,58 @@
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto 4px 24px;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: var(--light-gray) var(--switch-bg-url) no-repeat center;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: slide-back 0.2s;
+}
+
+.light #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  cursor: pointer;
+  outline: 8px solid var(--button-border);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--dark-gray);
+  border: 1px solid var(--black);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 32px;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 32px;
+  }
+  to {
+    left: 0;
+  }
+}

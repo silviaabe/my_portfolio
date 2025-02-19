@@ -14,17 +14,24 @@
   <link rel="stylesheet" href="./src/styles/about.css">
   <link rel="stylesheet" href="./src/styles/projects.css">
   <link rel="stylesheet" href="./src/styles/contacts.css">
+  <link rel="stylesheet" href="./src/styles/switch-button.css">
   <title>Silvia Abe</title>
 </head>
 <body>
   <nav>
     <h2 class="title">SILVIA<span>ABE</span></h2>
-    <ul>
-      <li><a href="#main" class="nav-link">Início</a></li>
-      <li><a href="#about" class="nav-link">Sobre</a></li>
-      <li><a href="#projects" class="nav-link">Projetos</a></li>
-      <li><a href="#contact" class="nav-link">Contato</a></li>
-    </ul>
+    <div class="right-side">
+      <ul>
+        <li><a href="#main" class="nav-link">Início</a></li>
+        <li><a href="#about" class="nav-link">Sobre</a></li>
+        <li><a href="#projects" class="nav-link">Projetos</a></li>
+        <li><a href="#contact" class="nav-link">Contato</a></li>
+      </ul>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+    </div>
   </nav>
 
   <section class="main-box" id="main">
@@ -301,7 +308,15 @@
       <p>2025 &copy; Silvia Abe - Todos os direitos reservados</p>
     </div>
   </footer>
-  
+
+  <!-- <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script> -->
   <script src="./script.js"></script>
 </body>
 </html>
