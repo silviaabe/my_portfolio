@@ -1,6 +1,6 @@
 # Portfólio
 
-Este é um projeto do meu portfólio, desenvolvido com <b>HTML</b>, <b>CSS</b> e <b>JavaScript</b>
+Este é um projeto do meu portfólio, desenvolvido com <b>HTML</b>, <b>CSS</b> e <b>JavaScript</b>.
 Neste site, é possível ver um pequeno resumo sobre mim, meus principais projetos e meios para entrar em contato comigo, além de poder escolher o tema do site (claro ou escuro).
 
 <br>
