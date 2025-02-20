@@ -84,3 +84,55 @@ function toggleMode() {
     html.classList.add('light');
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const projects = document.querySelectorAll('.grid-item');
+
+  // Inicializa a opacidade e posição de cada projeto
+  projects.forEach((project) => {
+    project.style.opacity = '0';
+    project.style.transform = 'translateY(50px)';
+    project.style.transition = 'opacity 0.6s ease, transform 2s ease';
+
+    // Efeito de hover
+    project.addEventListener('mouseenter', () => {
+      project.style.transform = 'scale(1.05)';
+      project.style.filter = 'brightness(0.8)';
+    });
+    project.addEventListener('mouseleave', () => {
+      project.style.transform = 'scale(1)';
+      project.style.filter = 'brightness(1)';
+    });
+  });
+
+  // Função para verificar se o elemento está visível próximo ao topo da página
+  function isElementNearTop(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight * 0.7 && rect.bottom > 0;
+  }
+
+  // Função para animar os projetos em sequência
+  function animateProjects() {
+      let delay = 0;
+      projects.forEach((project) => {
+          if (isElementNearTop(project)) {
+              setTimeout(() => {
+                  project.style.opacity = '1';
+                  project.style.transform = 'translateY(0)';
+              }, delay);
+              delay += 200; // Atraso entre as animações de cada projeto
+          } else {
+              // Volta à posição inicial se o elemento não estiver mais visível
+              project.style.opacity = '0';
+              project.style.transform = 'translateY(50px)';
+          }
+      });
+  }
+
+  // Event listeners
+  window.addEventListener('scroll', animateProjects);
+  window.addEventListener('resize', animateProjects);
+
+  // Chama a animação inicial
+  animateProjects();
+});
