@@ -5,6 +5,10 @@
   padding: 0 10%;
   justify-content: center;
 
+  @media (max-width: 480px){
+    height: auto;
+  }
+
   h2 {
     color: var(--dark-gray);
     font-size: 35px;
@@ -41,12 +45,6 @@
       h3 {
         color: var(--dark-gray);
         font-size: 20px;
-      }
-
-      img {
-        height: 100%;
-        width: 40%;
-        object-fit: contain;
       }
     }
   }

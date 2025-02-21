@@ -19,14 +19,24 @@
 </head>
 <body>
   <nav>
-    <h2 class="title">SILVIA<span>ABE</span></h2>
+    <h2 class="title">
+      <a href="/" class="nav-link">SILVIA<span>ABE</span></a>
+    </h2>
     <div class="right-side">
-      <ul>
-        <li><a href="#main" class="nav-link">Início</a></li>
-        <li><a href="#about" class="nav-link">Sobre</a></li>
-        <li><a href="#projects" class="nav-link">Projetos</a></li>
-        <li><a href="#contact" class="nav-link">Contato</a></li>
-      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="nav-links">
+        <ul>
+          <li><a href="#main" class="nav-link">Início</a></li>
+          <li><a href="#about" class="nav-link">Sobre</a></li>
+          <li><a href="#projects" class="nav-link">Projetos</a></li>
+          <li><a href="#contact" class="nav-link">Contato</a></li>
+        </ul>
+      </div>
       <div id="switch" onclick="toggleMode()">
         <button></button>
         <span></span>

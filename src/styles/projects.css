@@ -17,6 +17,10 @@
   grid-template-columns: repeat(2, 1fr);  /* Define 3 colunas de tamanho igual */
   grid-gap: 20px;                        /* Espaçamento entre os itens */
   padding: 20px;                         /* Espaçamento interno */
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Estilo para os itens do grid */
@@ -43,6 +47,18 @@
   justify-content: space-between;
   margin-top: 8px;
 
+  @media (max-width: 480px) {
+    display: block;
+  }
+
+  .buttons {
+    @media (max-width: 480px) {
+      display: flex;
+      justify-content: left;
+      gap: 8px;
+    }
+  }
+
   .buttons a {
     display: inline-block;
     padding: 10px 20px;
@@ -67,6 +83,12 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
+
+    @media (max-width: 480px) {
+      justify-content: left;
+      margin-left: 4px;
+      margin-top: 12px;
+    }
 
     .tag-icon {
       font-size: 25px;

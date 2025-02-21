@@ -136,3 +136,34 @@ document.addEventListener('DOMContentLoaded', function () {
   // Chama a animação inicial
   animateProjects();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelector(".nav-links");
+  const hamburger = document.querySelector(".hamburger");
+
+  function toggleMenu() {
+    navLinks.classList.toggle("active");
+  }
+
+  function closeMenu() {
+    if (navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+    }
+  }
+
+  // Abre/fecha o menu ao clicar no hambúrguer
+  hamburger.addEventListener("click", function (event) {
+    event.stopPropagation(); // Evita que o clique no hambúrguer feche o menu imediatamente
+    toggleMenu();
+  });
+
+  // Fecha o menu ao clicar fora dele
+  document.addEventListener("click", function (event) {
+    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  // Fecha o menu ao sair com o mouse
+  navLinks.addEventListener("mouseleave", closeMenu);
+});
