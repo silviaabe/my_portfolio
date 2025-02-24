@@ -108,10 +108,19 @@ li a:hover {
     width: 100%;
     text-align: center;
     padding: 20px 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .nav-links.active {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links.inactive {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none; /* Evita cliques enquanto está fechando */
   }
 
   .nav-links ul {

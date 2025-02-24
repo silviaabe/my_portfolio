@@ -20,22 +20,6 @@ function moveIcons() {
 // Executa a função de movimento a cada 2 segundos
 setInterval(moveIcons, 500); // Ajuste o intervalo conforme necessário
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const sections = document.querySelectorAll("section");
-
-//   const observer = new IntersectionObserver(entries => {
-//       entries.forEach(entry => {
-//           if (entry.isIntersecting) {
-//               entry.target.classList.remove("hidden");
-//           } else {
-//               entry.target.classList.add("hidden");
-//           }
-//       });
-//   }, { threshold: 0.3 });
-
-//   sections.forEach(section => observer.observe(section));
-// });
-
 document.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const windowHeight = window.innerHeight;
@@ -51,8 +35,6 @@ document.addEventListener("scroll", () => {
 
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.nav-link');
-
   let current = '';
 
   sections.forEach(section => {
@@ -64,7 +46,7 @@ window.addEventListener('scroll', () => {
     }
   });
 
-  navLinks.forEach(link => {
+  navItems.forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href').includes(current)) {
       link.classList.add('active');
@@ -140,30 +122,38 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelector(".nav-links");
   const hamburger = document.querySelector(".hamburger");
+  const navItems = document.querySelectorAll(".nav-link");
 
   function toggleMenu() {
     navLinks.classList.toggle("active");
   }
 
   function closeMenu() {
-    if (navLinks.classList.contains("active")) {
-      navLinks.classList.remove("active");
-    }
+    navLinks.classList.remove("active");
   }
 
-  // Abre/fecha o menu ao clicar no hambúrguer
-  hamburger.addEventListener("click", function (event) {
-    event.stopPropagation(); // Evita que o clique no hambúrguer feche o menu imediatamente
-    toggleMenu();
+  // Abre/fecha ao clicar no menu hamburguer
+  hamburger.addEventListener("click", toggleMenu);
+
+  // Destacar o link ativo ao clicar e fechar o menu
+  navItems.forEach(link => {
+    link.addEventListener("click", function () {
+      navItems.forEach(item => item.classList.remove("active")); // Remove active de todos os links
+      this.classList.add("active"); // Adiciona active ao link clicado
+      closeMenu(); // Fecha o menu
+    });
   });
+
+  // Fecha o menu se o mouse sair da área do menu
+  navLinks.addEventListener("mouseleave", closeMenu);
 
   // Fecha o menu ao clicar fora dele
   document.addEventListener("click", function (event) {
-    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+    const isClickInsideNav = navLinks.contains(event.target);
+    const isClickOnHamburger = hamburger.contains(event.target);
+
+    if (!isClickInsideNav && !isClickOnHamburger) {
       closeMenu();
     }
   });
-
-  // Fecha o menu ao sair com o mouse
-  navLinks.addEventListener("mouseleave", closeMenu);
 });
