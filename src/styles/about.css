@@ -1,8 +1,8 @@
 .about--all {
-  height: 110vh;
+  height: 120vh;
   text-align: center;
   justify-content: center;
-  padding: 100px 20%;
+  padding: 140px 20%;
   position: relative;
   transition: opacity 0.5s ease-in-out;
 
